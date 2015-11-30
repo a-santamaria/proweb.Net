@@ -14,11 +14,14 @@ public partial class Cursos : System.Web.UI.Page
     {
         this.username = "";
         this.idCurso = -1;
+        Button1.Enabled = false;
+        Button1.Visible = false;
         if (this.User != null && this.User.Identity.IsAuthenticated)
         {
             this.username = HttpContext.Current.User.Identity.Name;
             loged = true;
             Button1.Enabled = HttpContext.Current.User.IsInRole("admin");
+            Button1.Visible = HttpContext.Current.User.IsInRole("admin");
         }
         else
         {
@@ -48,7 +51,7 @@ public partial class Cursos : System.Web.UI.Page
 
             if (result.Any())
             {
-                Response.Redirect("Curso.aspx?id=" + id);
+                Response.Redirect("seguridad/Curso.aspx?id=" + id);
             }
             else
             {

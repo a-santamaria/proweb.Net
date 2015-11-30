@@ -27,20 +27,5 @@ public partial class CrearCurso : System.Web.UI.Page
         }
         Response.Redirect("Default.aspx");
 
-
-        /*
-        DataClassesDataContext dc = new DataClassesDataContext();
-
-        Curso2 curso = new Curso2();
-
-        curso.Nombre = TextBoxNombre.Text;
-        curso.Descripcion = TextBoxD.Text;
-        curso.Max = Int32.Parse(TextBoxCupo.Text);
-        curso.Habilitado = 1;
-
-
-        dc.Curso2s.InsertOnSubmit(curso);
-        dc.SubmitChanges();
-         */
     }
 }
