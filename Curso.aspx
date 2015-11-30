@@ -27,6 +27,10 @@
             Type="Int32" />
     </SelectParameters>
 </asp:SqlDataSource>
-<asp:Label ID="Label1" runat="server" Text="Label" Visible="False"></asp:Label>
+    <br />
+    <br />
+    <br />
+    Esta es la pagina del curso... Aca va toda la informacion del curso...En 
+    construcción!<asp:Label ID="Label1" runat="server" Text="Label" Visible="False"></asp:Label>
 </asp:Content>
 
