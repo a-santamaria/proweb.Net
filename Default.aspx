@@ -13,7 +13,7 @@
             SortExpression="Id" ReadOnly="True" />
         <asp:BoundField DataField="Nombre" HeaderText="Nombre" 
             SortExpression="Nombre" />
-        <asp:BoundField DataField="Inscritas" HeaderText="Inscritas" 
+        <asp:BoundField DataField="Inscritas" HeaderText="Inscritos" 
             SortExpression="Inscritas" />
         <asp:BoundField DataField="Descripcion" HeaderText="Descripcion" 
             SortExpression="Descripcion" />
@@ -21,15 +21,18 @@
             SortExpression="Habilitado" />
         <asp:BoundField DataField="Max" HeaderText="Cupo" SortExpression="Max" />
 
-         <asp:TemplateField HeaderText="View">
+         <asp:TemplateField HeaderText="">
             <ItemTemplate>
             <asp:LinkButton runat="server" ID="lnkView" OnClick="inscribir">Inscribir</asp:LinkButton>
             </ItemTemplate>
         </asp:TemplateField>
 
-         <asp:TemplateField HeaderText="View">
+         <asp:TemplateField HeaderText="">
             <ItemTemplate>
-            <asp:LinkButton runat="server" ID="lnkView2" OnClick="habilitar">Habilitar/Deshabilitar</asp:LinkButton>
+            <asp:LinkButton runat="server" ID="lnkView2" 
+                            OnClick="habilitar" 
+                            Enabled='<%# HttpContext.Current.User.IsInRole("Admin") %>'
+                            >Habilitar/Deshabilitar</asp:LinkButton>
             </ItemTemplate>
         </asp:TemplateField>
     </Columns>
@@ -40,6 +43,6 @@
         SelectCommand="SELECT * FROM [Curso]">
 </asp:SqlDataSource>
     <asp:Button ID="Button1" runat="server" onclick="Button1_Click" 
-        Text="Crear Curso" />
+                Text="Crear Curso" />
 </asp:Content>
 

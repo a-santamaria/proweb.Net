@@ -18,6 +18,7 @@ public partial class Cursos : System.Web.UI.Page
         {
             this.username = HttpContext.Current.User.Identity.Name;
             loged = true;
+            Button1.Enabled = HttpContext.Current.User.IsInRole("admin");
         }
         else
         {
@@ -73,7 +74,7 @@ public partial class Cursos : System.Web.UI.Page
         this.idCurso = Convert.ToInt32(GridView1.Rows[row].Cells[1].Text);
         if (loged)
         {
-            System.Windows.Forms.MessageBox.Show("Voy a inscribir " + this.username + " " + this.idCurso);
+            //System.Windows.Forms.MessageBox.Show("Voy a inscribir " + this.username + " " + this.idCurso);
             DataClassesDataContext dc = new DataClassesDataContext();
 
 
@@ -96,7 +97,7 @@ public partial class Cursos : System.Web.UI.Page
                 
                 foreach (Curso2 c in query)
                 {
-                    if (c.Max - c.Inscritas - 1 <= 0)
+                    if (c.Max - c.Inscritas - 1 < 0)
                     {
                         System.Windows.Forms.MessageBox.Show("No hay cupos en esta clase");
                     }
@@ -120,6 +121,7 @@ public partial class Cursos : System.Web.UI.Page
         {
             System.Windows.Forms.MessageBox.Show("No ha iniciado sesion");
         }
+        GridView1.DataBind();
     }
 
 
