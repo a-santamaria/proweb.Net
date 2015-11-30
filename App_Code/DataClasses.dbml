@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="prowebNet" Class="DataClassesDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Connection Mode="WebSettings" ConnectionString="Data Source=.\sqlexpress;Initial Catalog=prowebNet;Integrated Security=True;Pooling=False" SettingsObjectName="System.Configuration.ConfigurationManager.ConnectionStrings" SettingsPropertyName="prowebNetConnectionString1" Provider="System.Data.SqlClient" />
+  <Table Name="dbo.EstudianteXcurso" Member="EstudianteXcursos">
+    <Type Name="EstudianteXcurso">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="username" Type="System.String" DbType="NVarChar(256) NOT NULL" CanBeNull="false" />
+      <Column Name="id_Curso" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Curso_EstudianteXcurso" Member="Curso2" ThisKey="id_Curso" OtherKey="Id" Type="Curso2" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.Curso" Member="Curso2s">
+    <Type Name="Curso2">
+      <Column Name="Id" Type="System.Int32" DbType="Int NOT NULL" IsPrimaryKey="true" CanBeNull="false" />
+      <Column Name="Nombre" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Inscritas" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Descripcion" Type="System.String" DbType="VarChar(50) NOT NULL" CanBeNull="false" />
+      <Column Name="Habilitado" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Column Name="Max" Type="System.Int32" DbType="Int NOT NULL" CanBeNull="false" />
+      <Association Name="Curso_EstudianteXcurso" Member="EstudianteXcursos" ThisKey="Id" OtherKey="id_Curso" Type="EstudianteXcurso" />
+    </Type>
+  </Table>
+</Database>
