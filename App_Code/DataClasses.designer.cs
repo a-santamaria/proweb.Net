@@ -180,7 +180,7 @@ public partial class EstudianteXcurso : INotifyPropertyChanging, INotifyProperty
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Curso_EstudianteXcurso", Storage="_Curso2", ThisKey="id_Curso", OtherKey="Id", IsForeignKey=true)]
+	[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Curso2_EstudianteXcurso", Storage="_Curso2", ThisKey="id_Curso", OtherKey="Id", IsForeignKey=true)]
 	public Curso2 Curso2
 	{
 		get
@@ -279,7 +279,7 @@ public partial class Curso2 : INotifyPropertyChanging, INotifyPropertyChanged
 		OnCreated();
 	}
 	
-	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id", DbType="Int NOT NULL", IsPrimaryKey=true)]
+	[global::System.Data.Linq.Mapping.ColumnAttribute(Storage="_Id", DbType="Int NOT NULL", IsPrimaryKey=true, IsDbGenerated=true)]
 	public int Id
 	{
 		get
@@ -399,7 +399,7 @@ public partial class Curso2 : INotifyPropertyChanging, INotifyPropertyChanged
 		}
 	}
 	
-	[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Curso_EstudianteXcurso", Storage="_EstudianteXcursos", ThisKey="Id", OtherKey="id_Curso")]
+	[global::System.Data.Linq.Mapping.AssociationAttribute(Name="Curso2_EstudianteXcurso", Storage="_EstudianteXcursos", ThisKey="Id", OtherKey="id_Curso")]
 	public EntitySet<EstudianteXcurso> EstudianteXcursos
 	{
 		get

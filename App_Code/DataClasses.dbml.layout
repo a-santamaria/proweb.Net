@@ -2,10 +2,10 @@
 <ordesignerObjectsDiagram dslVersion="1.0.0.0" absoluteBounds="0, 0, 11, 8.5" name="DataClasses">
   <DataContextMoniker Name="/DataClassesDataContext" />
   <nestedChildShapes>
-    <classShape Id="324df854-c8b0-4787-9e9b-6c88a8646c40" absoluteBounds="4.25, 2.125, 2, 1.3862939453125">
+    <classShape Id="324df854-c8b0-4787-9e9b-6c88a8646c40" absoluteBounds="3.75, 1.875, 2, 1.3862939453125">
       <DataClassMoniker Name="/DataClassesDataContext/EstudianteXcurso" />
       <nestedChildShapes>
-        <elementListCompartment Id="fac1fba6-ee4d-4d7c-88a7-fc5bffb7dc4d" absoluteBounds="4.265, 2.585, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
+        <elementListCompartment Id="fac1fba6-ee4d-4d7c-88a7-fc5bffb7dc4d" absoluteBounds="3.7649999999999997, 2.335, 1.9700000000000002, 0.8262939453125" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
     <classShape Id="70a1e2fa-744f-4b17-96f3-4e21978196e7" absoluteBounds="0.875, 0.75, 2, 1.9631982421875">
@@ -14,8 +14,8 @@
         <elementListCompartment Id="ff1caf16-6bf8-40bc-874c-8078d3affcd8" absoluteBounds="0.89000000000000012, 1.21, 1.9700000000000002, 1.4031982421875" name="DataPropertiesCompartment" titleTextColor="Black" itemTextColor="Black" />
       </nestedChildShapes>
     </classShape>
-    <associationConnector edgePoints="[(2.875 : 2.41909912109375); (4.25 : 2.41909912109375)]" fixedFrom="Algorithm" fixedTo="Algorithm">
-      <AssociationMoniker Name="/DataClassesDataContext/Curso2/Curso_EstudianteXcurso" />
+    <associationConnector edgePoints="[(2.875 : 2.29409912109375); (3.75 : 2.29409912109375)]" fixedFrom="Algorithm" fixedTo="Algorithm">
+      <AssociationMoniker Name="/DataClassesDataContext/Curso2/Curso2_EstudianteXcurso" />
       <nodes>
         <classShapeMoniker Id="70a1e2fa-744f-4b17-96f3-4e21978196e7" />
         <classShapeMoniker Id="324df854-c8b0-4787-9e9b-6c88a8646c40" />

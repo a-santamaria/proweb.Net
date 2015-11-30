@@ -39,5 +39,7 @@
     
         SelectCommand="SELECT * FROM [Curso]">
 </asp:SqlDataSource>
+    <asp:Button ID="Button1" runat="server" onclick="Button1_Click" 
+        Text="Crear Curso" />
 </asp:Content>
 
